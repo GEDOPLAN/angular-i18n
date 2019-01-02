@@ -4,10 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --i18n-file src/messages.xlf --i18n-format xlf --i18n-locale de --output-path dist/de --base-href . && ng build --prod --i18n-file src/messages.en.xlf --i18n-format xlf --i18n-locale en --output-path dist/en --base-href .",
+    "build": "ng build --prod --i18n-file src/i18n/messages.en.xlf --i18n-format xlf --i18n-locale en --output-path dist/en --base-href . && ng build --prod --i18n-file src/i18n/messages.de.xlf --i18n-format xlf --i18n-locale de --output-path dist/de --base-href .",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "i18n": "ng xi18n --output-path i18n --i18n-locale en && xliffmerge --profile src/messages.config.json en de"
   },
   "private": true,
   "dependencies": {
@@ -30,9 +31,9 @@
     "@angular/cli": "~7.1.4",
     "@angular/compiler-cli": "~7.1.0",
     "@angular/language-service": "~7.1.0",
-    "@types/node": "~8.9.4",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
@@ -41,6 +42,7 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "ngx-i18nsupport": "^0.17.1",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",

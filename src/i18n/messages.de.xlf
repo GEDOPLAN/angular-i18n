@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2"
     xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" datatype="plaintext" original="ng2.template">
+    <file source-language="en" datatype="plaintext" original="ng2.template" target-language="de">
         <body>
             <trans-unit id="title" datatype="html">
                 <source>(welcome)</source>
-                <target>welcome</target>
+                <target state="new">Willkommen</target>
                 <context-group purpose="location">
                     <context context-type="sourcefile">app/app.component.html</context>
                     <context context-type="linenumber">12</context>
@@ -13,7 +13,7 @@
             </trans-unit>
             <trans-unit id="home-text" datatype="html">
                 <source>(Hello World)</source>
-                <target>Hello World</target>
+                <target state="new">Hallo Welt</target>
                 <context-group purpose="location">
                     <context context-type="sourcefile">app/app.component.html</context>
                     <context context-type="linenumber">14</context>
@@ -21,10 +21,10 @@
             </trans-unit>
             <trans-unit id="home-footer" datatype="html">
                 <source>(used language)</source>
-                <target>super</target>
+                <target state="new">verwendete Sprache: XX</target>
                 <context-group purpose="location">
                     <context context-type="sourcefile">app/app.component.html</context>
-                    <context context-type="linenumber">17</context>
+                    <context context-type="linenumber">16</context>
                 </context-group>
             </trans-unit>
         </body>
