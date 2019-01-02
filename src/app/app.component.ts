@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'GED-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ged-angular-i18n';
+  locale: string = 'init';
+
+  constructor(private translateService: TranslateService) {
+    this.locale = translateService.getBrowserLang();
+    translateService.use(this.locale);
+    translateService.get('TITLE').subscribe(t => console.log(t));
+  }
 }
