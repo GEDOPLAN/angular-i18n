@@ -7,7 +7,7 @@ import { I18nLoader } from './i18n/i18nLoader';
 
 import { I18n, MISSING_TRANSLATION_STRATEGY } from '@ngx-translate/i18n-polyfill';
 
-// required for accessing i18n message in code
+// required for accessing i18n message in code, i18n polyfill
 declare const require;
 export function translationsFactory(locale: string) {
   locale = locale == 'en-US' || !locale ? 'en' : locale;
