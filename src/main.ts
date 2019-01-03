@@ -10,10 +10,18 @@ if (environment.production) {
 
 // required for JIT
 declare const require;
-const translations = require(`raw-loader!./i18n/messages.en.xlf`);
+export function translationsFactory() {
+  let locale = (window.clientInformation && window.clientInformation.language) || window.navigator.language;
+  let language = locale.split('-')[0];
+
+  return require(`raw-loader!./i18n/messages.${language}.xlf`);
+}
 
 platformBrowserDynamic()
   .bootstrapModule(AppModule, {
-    providers: [{ provide: TRANSLATIONS, useValue: translations }, { provide: TRANSLATIONS_FORMAT, useValue: 'xlf' }]
+    providers: [
+      { provide: TRANSLATIONS, useFactory: translationsFactory, deps: [] },
+      { provide: TRANSLATIONS_FORMAT, useValue: 'xlf' }
+    ]
   })
   .catch(err => console.error(err));
