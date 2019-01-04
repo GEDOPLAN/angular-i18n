@@ -5,7 +5,6 @@ Demo-Projekt zum Blog Beitrag auf:
 `https://javaeeblog.wordpress.com/`
 
 > Internationalisierung. Eine typische Aufgaben bei der Implementierung von Web-Anwendungen. Diese Anforderung macht auch vor Angular nicht halt. Hier bieten sich dem Entwickler gleich zwei Möglichkeiten: zum einen die Verwendung der Core-Bibliothek oder die Verwendung der Bibliothek: "ngx-translate".
-> ![Screenshot](docs/ee8security.png)
 
 ## Run
 
